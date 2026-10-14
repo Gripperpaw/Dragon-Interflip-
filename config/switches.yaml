@@ -1,0 +1,174 @@
+#config_version=6
+
+#switches
+
+switches:
+  
+  # J1   - 7 pins                                               #separated by controller jst plug
+
+  s_start:
+    number: 0-0-1
+    tags: start
+    ignore_window_ms: 500
+
+  s_flipper_right:
+    number: 0-0-3
+    tags: right_flipper
+
+  s_flipper_left:
+    number: 0-0-2
+    tags: left_flipper
+    
+  s_pop_1:              #left
+    number: 0-0-8
+
+  s_pop_3:              #center
+    number: 0-0-9
+ 
+  s_pop_5:              #right
+    number: 0-0-10
+    
+  s_saucer:             #center
+    number: 1-0-29
+    ignore_window_ms: 500
+ 
+#---------------------------------------------------------------------------------------------
+
+  # J2  - 8 pins
+
+  s_eos_right:
+    number: 1-0-8
+
+  s_eos_left:
+    number: 1-0-9
+
+  s_plunger:            #plunger lane
+    number: 1-0-10  
+
+  s_drain:            #drain
+    number: 1-0-11
+    type: "NO"
+    ignore_window_ms: 300
+
+  s_target_left_low:
+    number: 0-0-19
+    ignore_window_ms: 500
+
+  s_target_left_mid:
+    number: 0-0-18
+    tags: bonus_eob
+    ignore_window_ms: 500
+
+  s_target_right_low:
+    number: 1-0-28
+    ignore_window_ms: 500
+
+  s_target_right_mid:
+    number: 1-0-27
+    tags: bonus_eob
+    ignore_window_ms: 500
+
+#---------------------------------------------------------------------------------------------
+
+  # J3  - 7 pins
+
+  s_number01:             #can connect lower lanes to these 5
+    number: 1-0-16
+    ignore_window_ms: 500
+
+  s_number02:
+    number: 1-0-17
+    ignore_window_ms: 500
+
+  s_number03:             #note there are 3, number 3 buttons
+    number: 1-0-18
+    ignore_window_ms: 500
+
+  s_number04:
+    number: 1-0-19
+    ignore_window_ms: 500
+
+  s_number05:
+    number: 1-0-20
+    ignore_window_ms: 500
+
+  s_side_button05:        #dragon lower left | 5 is top button down to 1 lowest button
+    number: 1-0-26
+    ignore_window_ms: 500
+
+  s_side_button04:        #dragon top left | can connect left and right to these 5
+    number: 1-0-25
+    ignore_window_ms: 500
+
+#---------------------------------------------------------------------------------------------
+
+  # J4  - 8 pins 
+
+  s_side_button03:        #dragon center
+    number: 1-0-24
+    ignore_window_ms: 500
+
+  s_side_button02:        #dragon lower right
+    number: 1-0-23
+    ignore_window_ms: 500
+
+  s_side_button01:        #dragon top right
+    number: 1-0-22
+    ignore_window_ms: 500
+
+  s_dragon1_up:
+    number: 1-0-1
+    type: "NC"
+
+  s_dragon1_down:
+    number: 0-0-11
+    tags: bonus_eob
+    ignore_window_ms: 500
+   
+  s_dragon2_up:
+    number: 1-0-2
+    type: "NC"
+
+  s_dragon2_down:
+    number: 0-0-27
+    tags: bonus_eob
+    ignore_window_ms: 500
+
+  s_dragon3_up:
+    number: 1-0-3
+    type: "NC"
+
+#---------------------------------------------------------------------------------------------
+
+  # J5  - 8 pins  
+
+  s_dragon3_down:
+    number: 0-0-26
+    tags: bonus_eob
+    ignore_window_ms: 500
+
+  s_dragon4_up:
+    number: 1-0-30
+    type: "NC"
+
+  s_dragon4_down:
+    number: 0-0-25
+    tags: bonus_eob
+    ignore_window_ms: 500
+
+  s_dragon5_up:
+    number: 1-0-31
+    type: "NC"
+
+  s_dragon5_down:
+    number: 0-0-24
+    tags: bonus_eob
+    ignore_window_ms: 500
+
+  s_tilt:       
+    number: 0-0-17
+    tags: tilt_warning
+    ignore_window_ms: 2000
+  # s_kickback:       #prox switch if kickback added
+  #   number: 0-0-
+  #   type: "NO"

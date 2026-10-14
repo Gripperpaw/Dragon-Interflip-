@@ -1,0 +1,374 @@
+#config_version=6
+
+#lights
+
+# J11: NEO 0 Neopixel  -  output (all these lights have MPF numbers with the
+#                        format 0-0-##. The first LED in the chain is 0-0-0)
+# J12: NEO 1 Neopixel  -  output (all these lights have MPF numbers with the
+#                        format 1-0-##. The first LED in the chain is 1-0-0)
+# Sweet: NEO 252 Neopixel output (all these lights have MPF numbers with the
+#                    format 252-0-##. The first LED in the chain is 252-0-0)
+
+lights:
+
+####################################################
+#               playfield lights                   #
+####################################################
+
+  l_pf_02:                       #top number05
+    start_channel: 0-0-0
+    type: grbw
+  l_pf_04:                       #top number04
+    previous: l_pf_02
+    type: grbw
+  l_pf_06:                       #top number03
+    previous: l_pf_04
+    type: grbw
+  l_pf_08:                       #top number02
+    previous: l_pf_06
+    type: grbw
+  l_pf_10:                       #top number01
+    previous: l_pf_08
+    type: grbw
+  l_pf_11:                       #jumper LED
+    previous: l_pf_10
+    type: grbw
+  l_pf_12:                       #center special
+    previous: l_pf_11
+    type: grbw
+  l_pf_14:                       #left special
+    previous: l_pf_12
+    type: grbw
+  l_pf_16:                       #left side_button05
+    previous: l_pf_14
+    type: grbw
+  l_pf_18:                       #left side_button04
+    previous: l_pf_16
+    type: grbw
+  l_pf_20:                       #left side_button03
+    previous: l_pf_18
+    type: grbw
+  l_pf_22:                       #left side_button02
+    previous: l_pf_20
+    type: grbw
+  l_pf_24:                       #left side_button01
+    previous: l_pf_22
+    type: grbw
+  l_pf_26:                       #bottom left number03
+    previous: l_pf_24
+    type: grbw
+  l_pf_28:                       #bottom number01
+    previous: l_pf_26
+    type: grbw
+  l_pf_30:                       #bottom number02
+    previous: l_pf_28
+    type: grbw
+  l_pf_32:                       #bonus 10k
+    previous: l_pf_30
+    type: grbw
+  l_pf_34:                       #bonus 20k
+    previous: l_pf_32
+    type: grbw
+  l_pf_36:                       #bonus 30k
+    previous: l_pf_34
+    type: grbw
+  l_pf_38:                       #bonus 40k
+    previous: l_pf_36
+    type: grbw
+  l_pf_40:                       #bonus 50k
+    previous: l_pf_38
+    type: grbw
+  l_pf_42:                       #center drain special
+    previous: l_pf_40
+    type: grbw
+  l_pf_44:                       #bonus 60k
+    previous: l_pf_42
+    type: grbw
+  l_pf_46:                       #bonus 70k
+    previous: l_pf_44
+    type: grbw
+  l_pf_48:                       #bonus 80k
+    previous: l_pf_46
+    type: grbw
+  l_pf_50:                       #bonus 90k
+    previous: l_pf_48
+    type: grbw
+  l_pf_52:                       #bonus 100k
+    previous: l_pf_50
+    type: grbw
+  l_pf_54:                       #bottom number04
+    previous: l_pf_52
+    type: grbw
+  l_pf_56:                       #bottom number05
+    previous: l_pf_54
+    type: grbw
+  l_pf_58:                       #bottom right number03
+    previous: l_pf_56
+    type: grbw
+  l_pf_60:                       #right side_button01
+    previous: l_pf_58
+    type: grbw
+  l_pf_62:                       #right side_button02
+    previous: l_pf_60
+    type: grbw
+  l_pf_64:                       #right side_button03
+    previous: l_pf_62
+    type: grbw
+  l_pf_66:                       #right side_button04
+    previous: l_pf_64
+    type: grbw
+  l_pf_68:                       #right side_button05
+    previous: l_pf_66
+    type: grbw
+  l_pf_70:                       #right special
+    previous: l_pf_68
+    type: grbw
+  l_pf_72:                       #jumper LED
+    previous: l_pf_70
+    type: grbw
+
+  l_vent_001:                   #just vent front 60mm amazon leds
+    previous: l_pf_72
+    type: grb
+  l_vent_002:
+    previous: l_vent_001
+    type: grb
+  l_vent_003:
+    previous: l_vent_002
+    type: grb
+  l_vent_004:
+    previous: l_vent_003
+    type: grb
+  l_vent_005:
+    previous: l_vent_004
+    type: grb
+  l_vent_006:
+    previous: l_vent_005
+    type: grb
+  l_vent_007:
+    previous: l_vent_006
+    type: grb
+  l_vent_008:
+    previous: l_vent_007
+    type: grb
+  l_vent_009:
+    previous: l_vent_008
+    type: grb
+  l_vent_010:
+    previous: l_vent_009
+    type: grb
+  l_vent_011:
+    previous: l_vent_010
+    type: grb
+  l_vent_012:
+    previous: l_vent_011
+    type: grb
+  l_vent_013:                     #jumper
+    previous: l_vent_012
+    type: grbw
+  l_player_03:
+    previous: l_vent_013
+    type: grbw
+  l_player_01:
+    previous: l_player_03
+    type: grbw
+  l_player_00:                    #jumper
+    previous: l_player_01
+    type: grbw
+  l_player_02:
+    previous: l_player_00
+    type: grbw
+  l_player_04:
+    previous: l_player_02
+    type: grbw
+
+
+####################################################
+#                    gi lights                     #
+####################################################
+
+  l_gi_01:                       #right top plastic
+    start_channel: 1-0-0
+    type: grbw 
+  l_gi_03:                       #right top plastic
+    previous: l_gi_01
+    type: grbw
+  l_gi_05:                       #pop_5
+    previous: l_gi_03
+    type: grb
+  l_gi_07:                       #pop_5
+    previous: l_gi_05
+    type: grb
+  l_gi_09:                       #pop_5
+    previous: l_gi_07
+    type: grb
+  l_gi_11:                       #center saucer
+    previous: l_gi_09
+    type: grbw
+  l_gi_13:                       #pop_3
+    previous: l_gi_11
+    type: grb
+  l_gi_15:                       #pop_3
+    previous: l_gi_13
+    type: grb
+  l_gi_17:                       #pop_3
+    previous: l_gi_15
+    type: grb
+  l_gi_19:                       #pop_1
+    previous: l_gi_17
+    type: grb
+  l_gi_21:                       #pop_1
+    previous: l_gi_19
+    type: grb
+  l_gi_23:                       #pop_1
+    previous: l_gi_21
+    type: grb
+  l_gi_25:                       #left top plastic
+    previous: l_gi_23
+    type: grbw
+  l_gi_27:                       #left top plastic
+    previous: l_gi_25
+    type: grbw
+  l_gi_29:                       #left mid target
+    previous: l_gi_27
+    type: grbw
+  l_gi_31:                       #left side plastic
+    previous: l_gi_29
+    type: grbw
+  l_gi_33:                       #left side plastic
+    previous: l_gi_31
+    type: grbw
+  l_gi_35:                       #left side plastic
+    previous: l_gi_33
+    type: grbw
+  l_gi_37:                       #number03
+    previous: l_gi_35
+    type: grbw
+  l_gi_39:                       #number01
+    previous: l_gi_37
+    type: grbw
+  l_gi_41:                       #number02
+    previous: l_gi_39
+    type: grbw
+  l_gi_43:                       #interflip top
+    previous: l_gi_41
+    type: grbw
+  l_gi_45:                       #interflip left
+    previous: l_gi_43
+    type: grbw
+  l_gi_47:                       #interflip left low
+    previous: l_gi_45
+    type: grbw
+  l_gi_49:                       #drain
+    previous: l_gi_47
+    type: grbw
+  l_gi_51:                       #interflip right low
+    previous: l_gi_49
+    type: grbw
+  l_gi_53:                       #interflip right
+    previous: l_gi_51
+    type: grbw
+
+  l_apron_001:                   #just apron front 60mm amazon leds
+    previous: l_gi_53
+    type: grb
+  l_apron_002:
+    previous: l_apron_001
+    type: grb
+  l_apron_003:
+    previous: l_apron_002
+    type: grb
+  l_apron_004:
+    previous: l_apron_003
+    type: grb
+  l_apron_005:
+    previous: l_apron_004
+    type: grb
+  l_apron_006:
+    previous: l_apron_005
+    type: grb
+  l_apron_007:
+    previous: l_apron_006
+    type: grb
+  l_apron_008:
+    previous: l_apron_007
+    type: grb
+  l_apron_009:
+    previous: l_apron_008
+    type: grb
+  l_apron_010:
+    previous: l_apron_009
+    type: grb
+  l_apron_011:
+    previous: l_apron_010
+    type: grb
+  l_apron_012:
+    previous: l_apron_011
+    type: grb
+  l_apron_013:
+    previous: l_apron_012
+    type: grb
+  l_apron_014:
+    previous: l_apron_013
+    type: grb
+  l_apron_015:
+    previous: l_apron_014
+    type: grb
+  l_apron_016:
+    previous: l_apron_015
+    type: grb
+  l_apron_017:
+    previous: l_apron_016
+    type: grb
+  l_apron_018:
+    previous: l_apron_017
+    type: grb
+  l_apron_019:
+    previous: l_apron_018
+    type: grb
+  l_apron_020:
+    previous: l_apron_019
+    type: grb
+  l_apron_021:
+    previous: l_apron_020
+    type: grb
+  l_apron_022:
+    previous: l_apron_021
+    type: grb
+  l_apron_023:
+    previous: l_apron_022
+    type: grb
+  l_apron_024:
+    previous: l_apron_023
+    type: grb
+  l_apron_025:
+    previous: l_apron_024
+    type: grb
+  l_apron_026:
+    previous: l_apron_025
+    type: grb
+
+  l_gi_55:                       #plunger
+    previous: l_apron_026
+    type: grbw
+  l_gi_57:                       #number04
+    previous: l_gi_55
+    type: grbw
+  l_gi_59:                       #number05
+    previous: l_gi_57
+    type: grbw
+  l_gi_61:                       #number03
+    previous: l_gi_59
+    type: grbw
+  l_gi_63:                       #right side plastic
+    previous: l_gi_61
+    type: grbw
+  l_gi_65:                       #right side plastic
+    previous: l_gi_63
+    type: grbw
+  l_gi_67:                       #right side plastic
+    previous: l_gi_65
+    type: grbw
+  l_gi_69:                       #right mid target
+    previous: l_gi_67
+    type: grbw

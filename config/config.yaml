@@ -1,0 +1,227 @@
+#config_version=6
+
+#machine config
+
+hardware:
+    platform: opp
+    driverboards: gen2
+
+#-----------------------------------------------------------------------------------------------
+
+opp:
+    ports: COM4, COM5
+    baud: 115200
+    #debug: true
+    # COM4 = 0, COM5 = 1
+
+#-----------------------------------------------------------------------------------------------
+
+psus:
+  default:
+    #Gives the capacitors extra time to recharge after firing a coil
+    #  and eases the load on the power supply. Doesn't affect autofire
+    #  devices like flippers, pops, slings.
+    release_wait_ms: 50
+
+#-----------------------------------------------------------------------------------------------
+
+config:                                  #main machine config in root folder
+  - coils.yaml
+  - lights.yaml
+  - switches.yaml
+
+#-----------------------------------------------------------------------------------------------
+
+modes:                                   #all the modes in the mode folder
+  - attract
+  - base
+  - bonus
+  - countdown_bonus
+  - dragons
+  - endofball
+  - high_score  
+  - number_lanes
+  - special
+  - switchrun
+  - tilt
+
+#-----------------------------------------------------------------------------------------------
+
+machine:
+    balls_installed: 2
+
+#-----------------------------------------------------------------------------------------------
+
+game:
+    balls_per_game: 3
+    max_players: 4
+  
+#-----------------------------------------------------------------------------------------------
+  
+ball_devices:
+  # bd_trough:
+  #   ball_switches: s_trough_b1, s_trough_b2
+  #   eject_coil: c_trough
+  #   tags: trough, home, drain
+  #   eject_timeouts: 500ms
+  #   eject_targets: bd_plunger_lane
+  #   confirm_eject_switch: s_plunger
+
+  bd_drain:
+    ball_switches: s_drain
+    eject_coil: c_drain_eject
+    eject_targets: bd_plunger_lane
+    tags: drain, home, trough
+    eject_timeouts: 3s
+
+  bd_plunger_lane:
+    ball_switches: s_plunger
+    mechanical_eject: true
+    eject_timeouts: 5s
+
+  bd_saucer:
+    ball_switches: s_saucer
+    auto_fire_on_unexpected_ball: false
+    eject_coil: c_saucer
+    eject_timeouts: 2s
+    # eject_coil_enable_time: 0
+    # entrance_count_delay: 500ms
+
+#-----------------------------------------------------------------------------------------------
+
+drop_targets:
+    dragon1:
+      switch: s_dragon1_down
+      reset_coil: c_dragon1_up
+
+    dragon2:
+      switch: s_dragon2_down
+      reset_coil: c_dragon2_up
+
+    dragon3:
+      switch: s_dragon3_down
+      reset_coil: c_dragon3_up
+
+    dragon4:
+      switch: s_dragon4_down
+      reset_coil: c_dragon4_up
+
+    dragon5:
+      switch: s_dragon5_down
+      reset_coil: c_dragon5_up
+
+#-----------------------------------------------------------------------------------------------
+
+drop_target_banks:
+  dragon01:
+    drop_targets: dragon1
+    reset_coils: c_dragon1_up
+    reset_events: timer_dragon_reset_timer_tick(ticks==1)
+  dragon02:
+    drop_targets: dragon2
+    reset_coils: c_dragon2_up
+    reset_events: timer_dragon_reset_timer_tick(ticks==2)
+  dragon03:
+    drop_targets: dragon3
+    reset_coils: c_dragon3_up
+    reset_events: timer_dragon_reset_timer_tick(ticks==3)
+  dragon04:
+    drop_targets: dragon4
+    reset_coils: c_dragon3_up
+    reset_events: timer_dragon_reset_timer_tick(ticks==4)
+  dragon05:
+    drop_targets: dragon5
+    reset_coils: c_dragon5_up
+    reset_events: timer_dragon_reset_timer_tick(ticks==5)
+
+#-----------------------------------------------------------------------------------------------
+   
+playfields:
+  playfield:
+    default_source_device: bd_plunger_lane
+    tags: default
+
+#-----------------------------------------------------------------------------------------------
+    
+flippers:
+  left_flipper:
+    main_coil: c_flipper_left_main
+    hold_coil: c_flipper_left_hold
+    activation_switch: s_flipper_left
+    eos_switch: s_eos_left
+    use_eos: true
+    repulse_on_eos_open: true
+    eos_active_ms_before_repulse: 500
+    disable_events: shutdown, ball_will_end, service_mode_entered
+
+  right_flipper:
+    main_coil: c_flipper_right_main
+    hold_coil: c_flipper_right_hold
+    activation_switch: s_flipper_right
+    eos_switch: s_eos_right
+    use_eos: true
+    repulse_on_eos_open: true
+    eos_active_ms_before_repulse: 500
+    disable_events: shutdown, ball_will_end, service_mode_entered
+
+#-----------------------------------------------------------------------------------------------
+
+# tilt:
+#   tilt_warning_switch_tag: tilt
+#   warnings_to_tilt: 3
+#   reset_warnings_events: ball_ended
+
+#-----------------------------------------------------------------------------------------------
+
+displays:
+  window:
+   width: 1920
+   height: 1080
+
+#-----------------------------------------------------------------------------------------------
+
+virtual_platform_start_active_switches:
+  - s_drain
+  #- s_trough_b1
+  #- s_trough_b2  
+
+#-----------------------------------------------------------------------------------------------
+
+player_vars:
+  pop01_hit:                   #all pop are for number_lanes
+    initial_value: 0
+  pop03_hit:
+    initial_value: 0
+  pop05_hit:
+    initial_value: 0
+  lower_complete:              #for special at mid targets
+    initial_value: 0
+
+  dragon1_hit:
+    initial_value: 0
+    value_type: int
+  dragon2_hit:
+    initial_value: 0
+    value_type: int
+  dragon3_hit:
+    initial_value: 0
+    value_type: int
+  dragon4_hit:
+    initial_value: 0
+    value_type: int
+  dragon5_hit:
+    initial_value: 0
+    value_type: int
+  dragon_bonus:
+    initial_value: 0
+    value_type: int
+
+  bonus_hit:
+    initial_value: 0
+    value_type: int
+
+#---------------------------------------------------------------------------------------------
+
+sound_player:
+  s_start_active:
+    new_game_reset:
