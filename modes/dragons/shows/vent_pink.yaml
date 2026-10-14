@@ -1,0 +1,376 @@
+#show_version=6
+- time: 0
+  lights:
+    l_vent_001: 'F600C4'
+    l_gi_55: 'C3009B'
+    
+- time: '+1'
+  lights:
+    l_vent_001: 'E000B2'
+    l_vent_002: 'F000BF'
+    l_vent_003: 'F900C6'
+    l_gi_55: 'A30081'
+    
+- time: '+1'
+  lights:
+    l_vent_001: 'C4009C'
+    l_vent_002: 'D600AA'
+    l_vent_003: 'E500B6'
+    l_vent_004: 'F400C2'
+    l_gi_55: '800065'
+    
+- time: '+1'
+  lights:
+    l_vent_001: 'A30082'
+    l_vent_002: 'B80093'
+    l_vent_003: 'CA00A0'
+    l_vent_004: 'DD00B0'
+    l_vent_005: 'ED00BD'
+    l_vent_006: 'FA00C7'
+    l_gi_55: '5D004A'
+    
+- time: '+1'
+  lights:
+    l_vent_001: '7F0065'
+    l_vent_002: '950076'
+    l_vent_003: 'A80086'
+    l_vent_004: 'BE0097'
+    l_vent_005: 'D200A7'
+    l_vent_006: 'E400B6'
+    l_vent_007: 'F300C1'
+    l_gi_55: '3A002E'
+    
+- time: '+1'
+  lights:
+    l_vent_001: '5C0049'
+    l_vent_002: '72005A'
+    l_vent_003: '87006B'
+    l_vent_004: '9C007C'
+    l_vent_005: 'B50090'
+    l_vent_006: 'C900A0'
+    l_vent_007: 'DB00AE'
+    l_vent_008: 'ED00BD'
+    l_vent_009: 'F900C6'
+    l_gi_55: '1E0018'
+    
+- time: '+1'
+  lights:
+    l_vent_001: '3B002F'
+    l_vent_002: '50003F'
+    l_vent_003: '63004F'
+    l_vent_004: '790061'
+    l_vent_005: '930075'
+    l_vent_006: 'A80086'
+    l_vent_007: 'BE0097'
+    l_vent_008: 'D300A8'
+    l_vent_009: 'E400B6'
+    l_vent_010: 'F400C2'
+    l_gi_55: '080006'
+    
+- time: '+1'
+  lights:
+    l_vent_001: '1F0018'
+    l_vent_002: '310027'
+    l_vent_003: '420035'
+    l_vent_004: '580046'
+    l_vent_005: '700059'
+    l_vent_006: '87006B'
+    l_vent_007: '9D007D'
+    l_vent_008: 'B50090'
+    l_vent_009: 'C900A0'
+    l_vent_010: 'DD00B0'
+    l_vent_011: 'F100BF'
+    l_gi_55: '000000'
+    
+- time: '+1'
+  lights:
+    l_vent_001: '070005'
+    l_vent_002: '150011'
+    l_vent_003: '23001C'
+    l_vent_004: '35002A'
+    l_vent_005: '4C003C'
+    l_vent_006: '61004D'
+    l_vent_007: '780060'
+    l_vent_008: '910073'
+    l_vent_009: 'A70085'
+    l_vent_010: 'BF0098'
+    l_vent_011: 'D600AA'
+    l_vent_012: 'E600B7'
+    l_vent_013: 'F500C3'
+    
+- time: '+1'
+  lights:
+    l_vent_001: '000000'
+    l_vent_002: '000000'
+    l_vent_003: '0B0009'
+    l_vent_004: '1A0015'
+    l_vent_005: '2D0024'
+    l_vent_006: '410033'
+    l_vent_007: '550044'
+    l_vent_008: '6E0058'
+    l_vent_009: '85006A'
+    l_vent_010: '9D007D'
+    l_vent_011: 'B80092'
+    l_vent_012: 'CC00A2'
+
+    
+- time: '+1'
+  lights:
+    l_vent_003: '000000'
+    l_vent_004: '050004'
+    l_vent_005: '13000F'
+    l_vent_006: '23001C'
+    l_vent_007: '36002B'
+    l_vent_008: '4C003D'
+    l_vent_009: '62004E'
+    l_vent_010: '7A0062'
+    l_vent_011: '960078'
+    l_vent_012: 'AD008A'
+
+    
+- time: '+1'
+  lights:
+    l_vent_004: '000000'
+    l_vent_005: '000000'
+    l_vent_006: '0B0009'
+    l_vent_007: '1B0015'
+    l_vent_008: '2E0024'
+    l_vent_009: '420034'
+    l_vent_010: '590047'
+    l_vent_011: '74005C'
+    l_vent_012: '8A006E'
+
+    
+- time: '+1'
+  lights:
+    l_vent_006: '000000'
+    l_vent_007: '050004'
+    l_vent_008: '130010'
+    l_vent_009: '24001C'
+    l_vent_010: '38002D'
+    l_vent_011: '520041'
+    l_vent_012: '680052'
+
+    
+- time: '+1'
+  lights:
+    l_vent_007: '000000'
+    l_vent_008: '000000'
+    l_vent_009: '0B0009'
+    l_vent_010: '1B0015'
+    l_vent_011: '300026'
+    l_vent_012: '430036'
+
+    
+- time: '+1'
+  lights:
+    l_vent_009: '000000'
+    l_vent_010: '060005'
+    l_vent_011: '160011'
+    l_vent_012: '27001F'
+
+    
+- time: '+1'
+  lights:
+    l_vent_010: '000000'
+    l_vent_011: '000000'
+    l_vent_012: '0E000B'
+
+    
+- time: '+1'
+  lights:
+    l_vent_012: '000000'
+
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+    
+- time: '+1'
+  lights:
+    l_vent_012: 'EF00BF'
+
+    
+- time: '+1'
+  lights:
+    l_vent_010: 'F600C4'
+    l_vent_011: 'E500B6'
+    l_vent_012: 'D500A9'
+
+    
+- time: '+1'
+  lights:
+    l_vent_009: 'F100BF'
+    l_vent_010: 'E100B3'
+    l_vent_011: 'CB00A1'
+    l_vent_012: 'B70091'
+
+    
+- time: '+1'
+  lights:
+    l_vent_007: 'F800C5'
+    l_vent_008: 'EA00BA'
+    l_vent_009: 'DA00AD'
+    l_vent_010: 'C5009D'
+    l_vent_011: 'AB0088'
+    l_vent_012: '950077'
+
+    
+- time: '+1'
+  lights:
+    l_vent_006: 'F200C0'
+    l_vent_007: 'E300B4'
+    l_vent_008: 'CF00A5'
+    l_vent_009: 'BC0096'
+    l_vent_010: 'A40082'
+    l_vent_011: '89006D'
+    l_vent_012: '73005B'
+
+    
+- time: '+1'
+  lights:
+    l_vent_004: 'F700C4'
+    l_vent_005: 'E800B9'
+    l_vent_006: 'D700AB'
+    l_vent_007: 'C5009D'
+    l_vent_008: 'AD008A'
+    l_vent_009: '980079'
+    l_vent_010: '800065'
+    l_vent_011: '64004F'
+    l_vent_012: '4F003E'
+
+    
+- time: '+1'
+  lights:
+    l_vent_002: 'FA00C7'
+    l_vent_003: 'F000BF'
+    l_vent_004: 'E100B3'
+    l_vent_005: 'CE00A4'
+    l_vent_006: 'BA0094'
+    l_vent_007: 'A50083'
+    l_vent_008: '8C006F'
+    l_vent_009: '75005D'
+    l_vent_010: '5D004A'
+    l_vent_011: '420035'
+    l_vent_012: '2F0025'
+
+    
+- time: '+1'
+  lights:
+    l_vent_001: 'F500C3'
+    l_vent_002: 'E600B7'
+    l_vent_003: 'D800AC'
+    l_vent_004: 'C6009D'
+    l_vent_005: 'AE008B'
+    l_vent_006: '99007A'
+    l_vent_007: '830068'
+    l_vent_008: '690054'
+    l_vent_009: '540043'
+    l_vent_010: '3C0030'
+    l_vent_011: '26001E'
+    l_vent_012: '150011'
+
+    
+- time: '+1'
+  lights:
+    l_vent_001: 'DE00B1'
+    l_vent_002: 'CC00A2'
+    l_vent_003: 'BA0094'
+    l_vent_004: 'A50083'
+    l_vent_005: '8D0070'
+    l_vent_006: '76005E'
+    l_vent_007: '60004C'
+    l_vent_008: '470039'
+    l_vent_009: '340029'
+    l_vent_010: '1F0019'
+    l_vent_011: '0D000A'
+    l_vent_012: '000000'
+ 
+    
+- time: '+1'
+  lights:
+    l_vent_001: 'C00098'
+    l_vent_002: 'AA0087'
+    l_vent_003: '970078'
+    l_vent_004: '810066'
+    l_vent_005: '680052'
+    l_vent_006: '510040'
+    l_vent_007: '3C0030'
+    l_vent_008: '27001F'
+    l_vent_009: '170012'
+    l_vent_010: '080006'
+    l_vent_011: '000000'
+
+    
+- time: '+1'
+  lights:
+    l_vent_001: '9E007E'
+    l_vent_002: '89006D'
+    l_vent_003: '74005C'
+    l_vent_004: '5E004B'
+    l_vent_005: '460038'
+    l_vent_006: '320028'
+    l_vent_007: '200019'
+    l_vent_008: '0E000C'
+    l_vent_009: '040003'
+    l_vent_010: '000000'
+
+    
+- time: '+1'
+  lights:
+    l_vent_001: '7B0062'
+    l_vent_002: '650050'
+    l_vent_003: '520041'
+    l_vent_004: '3D0031'
+    l_vent_005: '280020'
+    l_vent_006: '170013'
+    l_vent_007: '090007'
+    l_vent_008: '000000'
+    l_vent_009: '000000'
+
+    
+- time: '+1'
+  lights:
+    l_vent_001: '5A0047'
+    l_vent_002: '440036'
+    l_vent_003: '320029'
+    l_vent_004: '21001A'
+    l_vent_005: '0F000C'
+    l_vent_006: '040003'
+    l_vent_007: '000000'
+ 
+    
+- time: '+1'
+  lights:
+    l_vent_001: '37002C'
+    l_vent_002: '24001C'
+    l_vent_003: '160011'
+    l_vent_004: '080006'
+    l_vent_005: '000000'
+    l_vent_006: '000000'
+
+    
+- time: '+1'
+  lights:
+    l_vent_001: '1C0016'
+    l_vent_002: '0C000A'
+    l_vent_003: '000000'
+    l_vent_004: '000000'
+
+    
+- time: '+1'
+  lights:
+    l_vent_001: '060005'
+    l_vent_002: '000000'
+
+    
+- time: '+1'
+  lights:
+    l_vent_001: '000000'
+
+    

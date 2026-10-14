@@ -1,0 +1,62 @@
+#config_version=6
+
+mode:
+  start_events: ball_starting
+  stop_events: ball_ended
+  priority: 300
+
+#====================================================================
+# ACCRUAL - Track all 22 switches
+#====================================================================
+accruals:
+  all_switches_accrual:
+    events:
+      - s_pop_1_active
+      - s_pop_3_active
+      - s_pop_5_active
+      - s_target_left_low_active
+      - s_target_left_mid_active
+      - s_target_right_low_active
+      - s_target_right_mid_active
+      - s_number01_active
+      - s_number02_active
+      - s_number03_active
+      - s_number04_active
+      - s_number05_active
+      - s_side_button01_active
+      - s_side_button02_active
+      - s_side_button03_active
+      - s_side_button04_active
+      - s_side_button05_active
+      - s_dragon1_down_active
+      - s_dragon2_down_active
+      - s_dragon3_down_active
+      - s_dragon4_down_active
+      - s_dragon5_down_active
+    events_when_complete: all_switches_complete
+    reset_events: ball_ended
+
+#====================================================================
+# BONUS SCORING
+#====================================================================
+variable_player:
+  all_switches_complete:
+    score: 100000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

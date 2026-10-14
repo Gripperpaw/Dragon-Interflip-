@@ -1,0 +1,11 @@
+#show_version=6
+
+- time: 0
+  lights:
+    "*": white          # or 'on', or 'FF0000', '00FF00', etc.
+
+- time: '+3'
+  lights:
+    "*": off
+
+- time: '+3'

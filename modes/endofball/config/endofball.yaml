@@ -1,0 +1,66 @@
+#config_version=6
+
+mode:
+  start_events: ball_starting
+  stop_events: ball_ended
+  priority: 230
+
+#---------------------------------------------------------------------------------------------
+
+counters:
+  bonus_counter:
+    count_events: dragon1_down_hit, dragon2_down_hit, dragon3_down_hit, dragon4_down_hit, dragon5_down_hit, s_target_left_mid_active, s_target_right_mid_active
+    count_complete_value: 10
+    direction: up
+    starting_count: 0
+    reset_on_complete: false
+    reset_events: tilt_reset_bonus
+
+#---------------------------------------------------------------------------------------------
+
+light_player:
+
+  logicblock_bonus_counter_hit{count==1}: 
+    l_pf_32: on
+  logicblock_bonus_counter_hit{count==2}:
+    l_pf_34: on
+  logicblock_bonus_counter_hit{count==3}:
+    l_pf_36: on
+  logicblock_bonus_counter_hit{count==4}:
+    l_pf_38: on
+  logicblock_bonus_counter_hit{count==5}:
+    l_pf_40: on
+  logicblock_bonus_counter_hit{count==6}:
+    l_pf_44: on
+  logicblock_bonus_counter_hit{count==7}:
+    l_pf_46: on
+  logicblock_bonus_counter_hit{count==8}:
+    l_pf_48, l_pf_42: on
+  logicblock_bonus_counter_hit{count==9}:
+    l_pf_50: on
+  logicblock_bonus_counter_hit{count==10}:
+    l_pf_52: on
+
+#---------------------------------------------------------------------------------------------
+
+extra_balls:
+  bonus_extra_ball:
+    award_events: ball_will_end{device.counters.bonus_counter.value>=8}
+
+#---------------------------------------------------------------------------------------------
+
+variable_player:
+  logicblock_bonus_counter_hit:
+    bonus_hit:
+      int: 1
+      action: add
+
+  ball_ending:
+    bonus_hit:
+      int: 0
+      action: set
+      
+  tilt:                           # better to tie to 'tilt' event instead of mode start
+    bonus_hit:
+      int: 0
+      action: set

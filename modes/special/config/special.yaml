@@ -1,0 +1,69 @@
+#config_version=6
+
+#special
+
+mode:
+  start_events: upper_number_shot_group_complete
+  stop_events: ball_ended
+  priority: 225
+ 
+#---------------------------------------------------------------------------------------------
+
+shot_profiles:
+  special_off_on_profile:
+    loop: true
+    advance_on_hit: false
+    states:
+      - name: unlit
+        show: off
+      - name: lit
+        show: on
+
+#---------------------------------------------------------------------------------------------
+
+shots:
+  left_special_shot:
+    advance_events: advance_left_special, advance_specials
+    switch: s_target_left_mid
+    profile: special_off_on_profile
+    disable_events: disable_left_special
+    start_enabled: true
+    show_tokens:
+      led: l_pf_14
+    reset_events: mode_special_started
+  right_special_shot:
+    advance_events: advance_right_special, advance_specials
+    switch: s_target_right_mid
+    profile: special_off_on_profile
+    disable_events: disable_right_special
+    start_enabled: true
+    show_tokens:
+      led: l_pf_70
+    reset_events: mode_special_started
+
+#---------------------------------------------------------------------------------------------
+    
+event_player:
+  mode_special_started: set_lower_incomplete
+  lower_number_shot_group_lit_complete: set_lower_complete, advance_left_special
+  lower_number_shot_group_lit_hit{current_player.lower_complete==1}: advance_specials
+  left_special_shot_lit_hit: advance_specials
+  right_special_shot_lit_hit: advance_specials
+
+#---------------------------------------------------------------------------------------------
+
+variable_player:
+  set_lower_complete:
+    lower_complete:
+      int: 1
+      action: set
+  set_lower_incomplete:
+    lower_complete:
+      int: 0
+      action: set
+  left_special_shot_lit_hit{device.lights.l_pf_14.color != '000000'}:
+    score: 2000     #7000 on the currently lit side - 5000 points from base, so only 2000 needed here
+  right_special_shot_lit_hit{device.lights.l_pf_70.color != '000000'}:
+    score: 2000
+
+#---------------------------------------------------------------------------------------------

@@ -1,0 +1,126 @@
+#show_version=6
+- time: 0
+  lights:
+    l_gi_17: 'FFDB7E'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_gi_17: 'FEDA7D'
+    
+- time: '+1'
+  lights:
+    l_gi_17: '272113'
+    
+- time: '+1'
+  lights:
+    l_gi_17: '000000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '736238'
+    
+- time: '+1'
+  lights:
+    l_gi_13: 'F6D47A'
+    
+- time: '+1'
+  lights:
+    l_gi_13: 'FFDB7E'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_gi_13: 'F7D47A'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '534829'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '000000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_gi_15: '19160D'
+    
+- time: '+1'
+  lights:
+    l_gi_15: 'F1CF77'
+    
+- time: '+1'
+  lights:
+    l_gi_15: 'FFDB7E'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_gi_15: 'BBA15C'
+    
+- time: '+1'
+  lights:
+    l_gi_15: '010101'
+    l_gi_17: '9D864D'
+    

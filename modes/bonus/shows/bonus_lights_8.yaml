@@ -1,0 +1,59 @@
+#show_version=6
+
+- time: 0
+  lights:
+    l_pf_48: off
+    l_pf_42: off
+  sounds:
+    playfield_bonus:
+      action: play
+      bus: effects
+- time: 800ms
+  lights:
+    l_pf_46: off
+  sounds:
+    playfield_bonus:
+      action: play
+      bus: effects
+- time: 1600ms
+  lights:
+    l_pf_44: off
+  sounds:
+    playfield_bonus:
+      action: play
+      bus: effects
+- time: 2400ms
+  lights:
+    l_pf_40: off
+  sounds:
+    playfield_bonus:
+      action: play
+      bus: effects
+- time: 3200ms
+  lights:
+    l_pf_38: off
+  sounds:
+    playfield_bonus:
+      action: play
+      bus: effects
+- time: 4000ms
+  lights:
+    l_pf_36: off
+  sounds:
+    playfield_bonus:
+      action: play
+      bus: effects
+- time: 4800ms
+  lights:
+    l_pf_34: off
+  sounds:
+    playfield_bonus:
+      action: play
+      bus: effects
+- time: 5600ms
+  lights:
+    l_pf_32: off
+  sounds:
+    playfield_bonus:
+      action: play
+      bus: effects

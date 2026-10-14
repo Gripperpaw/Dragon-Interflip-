@@ -1,0 +1,191 @@
+#config_version=6
+
+#pop_bumpers
+
+mode:
+  start_events: ball_starting
+  stop_events: ball_ended
+  priority: 150
+
+#---------------------------------------------------------------------------------------------
+
+shot_profiles:
+  on_off_profile:
+    states:
+      - name: lit
+        show: on
+      - name: unlit
+        show: off
+  off_on_profile:
+    states:
+      - name: unlit
+        show: off
+      - name: lit
+        show: on
+
+#---------------------------------------------------------------------------------------------
+ 
+shots:
+  shot_upper_1:
+    switch: s_number01
+    profile: on_off_profile
+    show_tokens:
+      led: l_pf_10
+  shot_upper_2:
+    switch: s_number02
+    profile: on_off_profile
+    show_tokens:
+      led: l_pf_08
+  shot_upper_3:
+    switch: s_number03
+    profile: on_off_profile
+    show_tokens:
+      led: l_pf_06
+  shot_upper_4:
+    switch: s_number04
+    profile: on_off_profile
+    show_tokens:
+      led: l_pf_04
+  shot_upper_5:
+    switch: s_number05
+    profile: on_off_profile
+    show_tokens:
+      led: l_pf_02
+  shot_lower_1:
+    switch: s_number01
+    profile: off_on_profile
+    show_tokens:
+      led: l_pf_28
+  shot_lower_2:
+    switch: s_number02
+    profile: off_on_profile
+    show_tokens:
+      led: l_pf_30
+  shot_lower_3_left:
+    switch: s_number03
+    profile: off_on_profile
+    show_tokens:
+      led: l_pf_26
+    tags: shot_lower_3
+  shot_lower_3_right:
+    switch: s_number03
+    profile: off_on_profile
+    show_tokens:
+      led: l_pf_58
+    tags: shot_lower_3
+  shot_lower_4:
+    switch: s_number04
+    profile: off_on_profile
+    show_tokens:
+      led: l_pf_54
+  shot_lower_5:
+    switch: s_number05
+    profile: off_on_profile
+    show_tokens:
+      led: l_pf_56
+
+#---------------------------------------------------------------------------------------------
+      
+shot_groups:
+  upper_number_shot_group:
+    shots: shot_upper_1, shot_upper_2, shot_upper_3, shot_upper_4, shot_upper_5
+    reset_events: ball_started
+  lower_number_shot_group:
+    shots: shot_lower_1, shot_lower_2, shot_lower_3_left, shot_lower_3_right, shot_lower_4, shot_lower_5
+    reset_events: ball_started
+    
+#---------------------------------------------------------------------------------------------
+
+event_player:
+  s_number01_active{current_player.num01_hit == 0}: num01_hit
+  s_number03_active{current_player.num03_hit == 0}: num03_hit
+  s_number05_active{current_player.num05_hit == 0}: num05_hit
+
+#---------------------------------------------------------------------------------------------
+
+light_player:
+  num01_hit:
+    l_gi_19: on      # pop_1 indicator
+    l_gi_21: on
+    l_gi_23: on
+
+  num03_hit:
+    l_gi_13: on      # pop_3 indicator
+    l_gi_15: on
+    l_gi_17: on  
+
+  num05_hit:
+    l_gi_05: on      # pop_5 indicator
+    l_gi_07: on 
+    l_gi_09: on
+  
+#---------------------------------------------------------------------------------------------
+
+variable_player:
+
+  ball_started:
+    pop01_hit:                     #all pop hits linked to player_var in config that resets them to 0
+      action: set
+      int: 0
+    pop03_hit:
+      action: set
+      int: 0
+    pop05_hit:
+      action: set
+      int: 0
+
+  num01_hit:    
+    pop01_hit:
+      int: 1
+      action: add
+  num03_hit:
+    pop03_hit:
+      int: 1
+      action: add
+  num05_hit:
+    pop05_hit:
+      int: 1
+      action: add
+
+  s_pop_1_active:
+    score: 9000 * current_player.pop01_hit
+
+  s_pop_3_active:
+    score: 9000 * current_player.pop03_hit
+
+  s_pop_5_active:
+    score: 9000 * current_player.pop05_hit
+
+  ball_ending:
+    num01_hit: 0
+    num03_hit: 0
+    num05_hit: 0  
+#---------------------------------------------------------------------------------------------
+
+sound_player:
+
+  s_number01_active:
+    blip_5:
+      bus: effects
+  s_number02_active:
+    blip_5:
+      bus: effects
+  s_number03_active:
+    blip_5:
+      bus: effects
+  s_number04_active:
+    blip_5:
+      bus: effects
+  s_number05_active:
+    blip_5:
+      bus: effects
+
+  s_pop_1_active:
+    pop_bumper:
+      bus: effects
+  s_pop_3_active:
+    pop_bumper:
+      bus: effects
+  s_pop_5_active:
+    pop_bumper:
+      bus: effects

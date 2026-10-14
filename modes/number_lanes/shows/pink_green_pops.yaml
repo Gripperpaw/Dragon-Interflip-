@@ -1,0 +1,373 @@
+#show_version=6
+- time: 0
+  lights:
+    l_gi_05: '000000'
+    l_gi_07: '000000'
+    l_gi_09: '000000'
+    l_gi_19: 'F607C9'
+    l_gi_21: 'F607C9'
+    l_gi_23: 'F607C9'
+    
+- time: '+1'
+  lights:
+    l_gi_19: 'EE0EC2'
+    l_gi_21: 'EE0EC2'
+    l_gi_23: 'EE0EC2'
+    
+- time: '+1'
+  lights:
+    l_gi_19: 'E615BC'
+    l_gi_21: 'E615BC'
+    l_gi_23: 'E615BC'
+    
+- time: '+1'
+  lights:
+    l_gi_19: 'DE1DB5'
+    l_gi_21: 'DE1DB5'
+    l_gi_23: 'DE1DB5'
+    
+- time: '+1'
+  lights:
+    l_gi_19: 'D624AF'
+    l_gi_21: 'D624AF'
+    l_gi_23: 'D624AF'
+    
+- time: '+1'
+  lights:
+    l_gi_19: 'CE2BA8'
+    l_gi_21: 'CE2BA8'
+    l_gi_23: '881C6F'
+    
+- time: '+1'
+  lights:
+    l_gi_19: 'C633A2'
+    l_gi_21: 'C633A2'
+    l_gi_23: '000000'
+    
+- time: '+1'
+  lights:
+    l_gi_17: '030102'
+    l_gi_19: 'BE3A9B'
+    l_gi_21: 'BC3999'
+    
+- time: '+1'
+  lights:
+    l_gi_17: 'B54194'
+    l_gi_19: '040103'
+    l_gi_21: '150812'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '020102'
+    l_gi_17: 'AE488E'
+    l_gi_19: '000000'
+    l_gi_21: '000000'
+    
+- time: '+1'
+  lights:
+    l_gi_13: 'A44F86'
+    l_gi_15: '9C4B80'
+    l_gi_17: 'A65088'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '9E5781'
+    l_gi_15: '9E5781'
+    l_gi_17: '9E5781'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '965E7B'
+    l_gi_15: '965E7B'
+    l_gi_17: '965E7B'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '8E6674'
+    l_gi_15: '8E6674'
+    l_gi_17: '8E6674'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '866D6E'
+    l_gi_15: '866D6E'
+    l_gi_17: '866D6E'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '7D7467'
+    l_gi_15: '7D7467'
+    l_gi_17: '7D7467'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '757B61'
+    l_gi_15: '757B61'
+    l_gi_17: '757B61'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '6D835A'
+    l_gi_15: '6D835A'
+    l_gi_17: '6D835A'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '658A54'
+    l_gi_15: '658A54'
+    l_gi_17: '658A54'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '5D914D'
+    l_gi_15: '5D914D'
+    l_gi_17: '5D914D'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '1A2F16'
+    l_gi_15: '559947'
+    l_gi_17: '25431F'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '000000'
+    l_gi_15: '4DA040'
+    l_gi_17: '000000'
+    
+- time: '+1'
+  lights:
+    l_gi_05: '010201'
+    l_gi_15: '43A138'
+    
+- time: '+1'
+  lights:
+    l_gi_05: '3DAD33'
+    l_gi_09: '2C7D25'
+    l_gi_15: '000000'
+    
+- time: '+1'
+  lights:
+    l_gi_05: '35B62D'
+    l_gi_09: '35B62D'
+    
+- time: '+1'
+  lights:
+    l_gi_05: '2DBD26'
+    l_gi_07: '218C1C'
+    l_gi_09: '2DBD26'
+    
+- time: '+1'
+  lights:
+    l_gi_05: '25C420'
+    l_gi_07: '25C420'
+    l_gi_09: '25C420'
+    
+- time: '+1'
+  lights:
+    l_gi_05: '1DCC19'
+    l_gi_07: '1DCC19'
+    l_gi_09: '1DCC19'
+    
+- time: '+1'
+  lights:
+    l_gi_05: '15D313'
+    l_gi_07: '15D313'
+    l_gi_09: '15D313'
+    
+- time: '+1'
+  lights:
+    l_gi_05: '0DDA0C'
+    l_gi_07: '0DDA0C'
+    l_gi_09: '0DDA0C'
+    
+- time: '+1'
+  lights:
+    l_gi_05: '05E206'
+    l_gi_07: '05E206'
+    l_gi_09: '05E206'
+    
+- time: '+1'
+  lights:
+    l_gi_05: 'F60DF6'
+    l_gi_07: 'F60DF6'
+    l_gi_09: 'F60DF6'
+    
+- time: '+1'
+  lights:
+    l_gi_05: 'EE14EE'
+    l_gi_07: 'EE14EE'
+    l_gi_09: 'EE14EE'
+    
+- time: '+1'
+  lights:
+    l_gi_05: 'E61BE6'
+    l_gi_07: 'E61BE6'
+    l_gi_09: 'E61BE6'
+    
+- time: '+1'
+  lights:
+    l_gi_05: 'DE22DE'
+    l_gi_07: 'DE22DE'
+    l_gi_09: 'DE22DE'
+    
+- time: '+1'
+  lights:
+    l_gi_05: 'D529D6'
+    l_gi_07: 'BC24BD'
+    l_gi_09: 'D529D6'
+    
+- time: '+1'
+  lights:
+    l_gi_05: 'CD30CE'
+    l_gi_07: '000000'
+    l_gi_09: 'CD30CE'
+    
+- time: '+1'
+  lights:
+    l_gi_05: 'C537C6'
+    l_gi_09: 'BD35BE'
+    
+- time: '+1'
+  lights:
+    l_gi_05: '020102'
+    l_gi_09: '000000'
+    l_gi_15: 'B73CB8'
+    
+- time: '+1'
+  lights:
+    l_gi_05: '000000'
+    l_gi_15: 'B445B6'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '3E1B3E'
+    l_gi_15: 'AC4CAE'
+    l_gi_17: '6F3171'
+    
+- time: '+1'
+  lights:
+    l_gi_13: 'A453A6'
+    l_gi_15: 'A453A6'
+    l_gi_17: 'A453A6'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '9C5A9E'
+    l_gi_15: '9C5A9E'
+    l_gi_17: '9C5A9E'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '946196'
+    l_gi_15: '946196'
+    l_gi_17: '946196'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '8B688E'
+    l_gi_15: '8B688E'
+    l_gi_17: '8B688E'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '836F86'
+    l_gi_15: '836F86'
+    l_gi_17: '836F86'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '7B767E'
+    l_gi_15: '7B767E'
+    l_gi_17: '7B767E'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '737D76'
+    l_gi_15: '737D76'
+    l_gi_17: '737D76'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '6A846E'
+    l_gi_15: '6A846E'
+    l_gi_17: '6A846E'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '628B66'
+    l_gi_15: '628B66'
+    l_gi_17: '628B66'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '37593A'
+    l_gi_15: '19281A'
+    l_gi_17: '5A925E'
+    
+- time: '+1'
+  lights:
+    l_gi_13: '000000'
+    l_gi_15: '000000'
+    l_gi_17: '529956'
+    
+- time: '+1'
+  lights:
+    l_gi_17: '183419'
+    l_gi_19: '397B3C'
+    l_gi_21: '3F8842'
+    
+- time: '+1'
+  lights:
+    l_gi_17: '000000'
+    l_gi_19: '41A746'
+    l_gi_21: '41A746'
+    
+- time: '+1'
+  lights:
+    l_gi_19: '39AE3E'
+    l_gi_21: '39AE3E'
+    l_gi_23: '091C0A'
+    
+- time: '+1'
+  lights:
+    l_gi_19: '31B536'
+    l_gi_21: '31B536'
+    l_gi_23: '31B536'
+    
+- time: '+1'
+  lights:
+    l_gi_19: '29BC2E'
+    l_gi_21: '29BC2E'
+    l_gi_23: '29BC2E'
+    
+- time: '+1'
+  lights:
+    l_gi_19: '20C326'
+    l_gi_21: '20C326'
+    l_gi_23: '20C326'
+    
+- time: '+1'
+  lights:
+    l_gi_19: '18CA1E'
+    l_gi_21: '18CA1E'
+    l_gi_23: '18CA1E'
+    
+- time: '+1'
+  lights:
+    l_gi_19: '10D116'
+    l_gi_21: '10D116'
+    l_gi_23: '10D116'
+    
+- time: '+1'
+  lights:
+    l_gi_19: '08D80E'
+    l_gi_21: '08D80E'
+    l_gi_23: '08D80E'
+    
+- time: '+1'
+  lights:
+    l_gi_19: '00DF06'
+    l_gi_21: '00DF06'
+    l_gi_23: '00DF06'
+    

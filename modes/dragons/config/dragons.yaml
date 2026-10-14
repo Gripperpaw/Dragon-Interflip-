@@ -1,0 +1,221 @@
+#config_version=6
+
+#dragons
+
+mode:
+  start_events: ball_starting
+  stop_events: ball_ended
+  priority: 200
+
+#---------------------------------------------------------------------------------------------
+
+#====================================================================
+# LIGHTING
+#====================================================================
+light_player:
+  # Light corresponding button when dragon is knocked down
+  dragon1_down_hit:
+    l_pf_60: on
+    l_pf_24: on
+  dragon2_down_hit:
+    l_pf_62: on
+    l_pf_22: on
+  dragon3_down_hit:
+    l_pf_64: on
+    l_pf_20: on
+  dragon4_down_hit:
+    l_pf_66: on
+    l_pf_18: on
+  dragon5_down_hit:
+    l_pf_68: on
+    l_pf_16: on
+
+  # All 5 dragons hit = light saucer + extra ball light
+  all_dragons_hit:
+    l_pf_12: on
+    #l_pf_42: on   #eb, not at 50k (thats 5 dragons)
+
+#---------------------------------------------------------------------------------------------
+
+show_player:
+  dragon1_down_hit:
+    dragon_pulse:
+      loops: 1
+      speed: 50
+    interflip_spin:
+      loops: 2
+      speed: 40    
+  dragon2_down_hit:
+    dragon_pulse:
+      loops: 1
+      speed: 50
+    interflip_spin:
+      loops: 2
+      speed: 40  
+  dragon3_down_hit:
+    dragon_pulse:
+      loops: 1
+      speed: 50
+    interflip_spin:
+      loops: 2
+      speed: 40
+  dragon4_down_hit:
+    dragon_pulse:
+      loops: 1
+      speed: 50
+    interflip_spin:
+      loops: 2
+      speed: 40
+  dragon5_down_hit:
+    dragon_pulse:
+      loops: 1
+      speed: 50
+    interflip_spin:
+      loops: 2
+      speed: 40
+
+  all_dragons_hit:
+    blue_spin_dragon:
+      loops: 4
+      speed: 80
+    apron_pink:
+      loops: 2
+      speed: 40
+    vent_pink:
+      loops: 2
+      speed: 40
+      
+#====================================================================
+# DRAGON HIT EVENTS
+#====================================================================
+event_player:
+  s_dragon1_down_active: dragon1_down_hit
+  s_dragon2_down_active: dragon2_down_hit
+  s_dragon3_down_active: dragon3_down_hit
+  s_dragon4_down_active: dragon4_down_hit
+  s_dragon5_down_active: dragon5_down_hit
+
+  s_side_button01_active{current_player.dragon1_hit == 1}: side_button01_dragon_hit
+  s_side_button02_active{current_player.dragon2_hit == 1}: side_button02_dragon_hit
+  s_side_button03_active{current_player.dragon3_hit == 1}: side_button03_dragon_hit
+  s_side_button04_active{current_player.dragon4_hit == 1}: side_button04_dragon_hit
+  s_side_button05_active{current_player.dragon5_hit == 1}: side_button05_dragon_hit
+
+#====================================================================
+# ACCRUAL - Track all 5 dragons
+#====================================================================
+accruals:
+  dragons_accrual:
+    events:
+      - dragon1_down_hit
+      - dragon2_down_hit
+      - dragon3_down_hit
+      - dragon4_down_hit
+      - dragon5_down_hit
+    events_when_complete: all_dragons_hit
+    reset_events:
+      - ball_ending
+
+#====================================================================
+# SIDE BUTTON SCORING (100 → 1000 after dragon hit)
+#====================================================================
+variable_player:
+  ball_ending:
+    dragon1_hit:
+      int: 0
+      action: set
+    dragon2_hit:
+      int: 0
+      action: set
+    dragon3_hit:
+      int: 0
+      action: set
+    dragon4_hit:
+      int: 0
+      action: set
+    dragon5_hit:
+      int: 0
+      action: set
+    dragon_bonus:
+      int: 0
+      action: set
+
+  # Mark dragon as hit
+  dragon1_down_hit:
+    dragon1_hit: 1
+  dragon2_down_hit:
+    dragon2_hit: 1
+  dragon3_down_hit:
+    dragon3_hit: 1
+  dragon4_down_hit:
+    dragon4_hit: 1
+  dragon5_down_hit:
+    dragon5_hit: 1
+
+
+  side_button01_dragon_hit:
+    score: 900
+  side_button02_dragon_hit:
+    score: 900
+  side_button03_dragon_hit:
+    score: 900
+  side_button04_dragon_hit:
+    score: 900
+  side_button05_dragon_hit:
+    score: 900
+
+
+#====================================================================
+# SAUCER SCORING (7000 when all dragons are hit)
+#====================================================================
+  all_dragons_hit:
+    dragon_bonus: 1
+
+  s_saucer_active:
+    score: 2000 * current_player.dragon_bonus
+    #the score for a non bonus hit is in the base.yaml with all the other switch scoring, so it's not needed here. 
+
+#====================================================================
+# SOUNDS
+#====================================================================
+sound_player:
+  s_dragon1_down_active:
+    dragon_only:
+      bus: effects
+  s_dragon2_down_active:
+    dragon_only:
+      bus: effects
+  s_dragon3_down_active:
+    dragon_only:
+      bus: effects
+  s_dragon4_down_active:
+    dragon_only:
+      bus: effects
+  s_dragon5_down_active:
+    dragon_only:
+      bus: effects
+
+  dragon1_down_hit:
+    blip_5:
+  dragon2_down_hit:
+    blip_5:
+  dragon3_down_hit:
+    blip_5:
+  dragon4_down_hit:
+    blip_5:
+  dragon5_down_hit:
+    blip_5:
+
+  s_side_button01_active:
+    side_chirp:
+  s_side_button02_active:
+    side_chirp:
+  s_side_button03_active:
+    side_chirp:
+  s_side_button04_active:
+    side_chirp:
+  s_side_button05_active:
+    side_chirp:
+
+  s_saucer_active:
+    blip_5_saucer:

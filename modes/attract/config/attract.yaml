@@ -1,0 +1,51 @@
+#config_version=6
+
+# attract
+
+slide_player:
+  mode_attract_started: attract
+
+#-----------------------------------------------------------------------------------------------
+
+mode_settings:
+  selectable_items:
+    - high_score_to_date                                                       # high score slides stored in gmc addons / slides
+    - last_scores_1p{machine.player1_score and not machine.player2_score}
+    - last_scores_2p{machine.player1_score and not machine.player3_score}      #"selectable item" names need to match the names in mpf carousel
+    - last_scores_3p{machine.player1_score and not machine.player4_score}
+    - last_scores_4p{machine.player4_score}
+
+  next_item_events: timer_attract_carousel_timer_complete, s_flipper_right_active
+  previous_items_events: s_flipper_left_active
+
+#-----------------------------------------------------------------------------------------------
+
+timers:
+  attract_carousel_timer:
+    end_value: 4
+    tick_interval: 2s
+    start_running: true
+
+    control_events:
+      - action: start
+        event: mode_attract_started
+      - action: restart
+        event: timer_attract_carousel_timer_complete
+
+#-----------------------------------------------------------------------------------------------
+
+sound_player:
+  mode_attract_started:
+    dragon_only:
+     bus: effects
+    # crossed _swords:
+    #  bus: music
+    #  loops: -1
+
+#-----------------------------------------------------------------------------------------------
+
+show_player:
+  mode_attract_started:
+    attract_show:
+      loops: -1
+      speed: 30

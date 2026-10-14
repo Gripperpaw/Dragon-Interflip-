@@ -1,0 +1,89 @@
+#config_version=6
+
+#tilt
+
+tilt:
+  tilt_warning_switch_tag: tilt_warning          # your tilt bob switches should have this tag
+  warnings_to_tilt: 3
+  reset_warnings_events: ball_ended      # or game_ended if you prefer
+  settle_time: 3s              # time for bob to stop swinging
+  multiple_hit_window: 800ms   # ignores bounce / rapid hits
+# Optional: customize what happens on tilt
+
+event_player:
+  tilt:
+    disable_flippers: {}          # already happens by default in most cases
+    tilt_reset_bonus: {}          # you had this
+    # add any other events you want on full tilt
+
+sound_player:
+  tilt_warning:
+    dragon_tilt:
+      action: play  
+  tilt:
+    dragon_tilt:
+      action: play
+
+slide_player:
+  _overwrite: True
+
+widget_player:
+  tilt_warning_1:
+    tilt_1:
+      slide: base
+      expire: 3s
+  tilt_warning_2:
+    tilt_2:
+      slide: base
+      expire: 3s
+  tilt:
+    tilted:
+      slide: base  
+      expire: 3s          
+# variable_player:
+#   tilt:                           # better to tie to 'tilt' event instead of mode start
+#     bonus_hit:
+#       int: 0
+#       action: set
+
+# If you have a bonus counter you want to reset on tilt
+# counters:
+#   bonus_counter:
+#     reset_events: tilt
+
+
+# mode:
+#   start_events: tilt
+#   stop_events: ball_ended
+#   priority: 10000
+#   game_mode: false
+
+# #---------------------------------------------------------------------------------------------
+
+# event_player:
+#   mode_tilt_started:
+#     disable_flippers: {}
+#     tilt_reset_bonus: {}
+
+# #---------------------------------------------------------------------------------------------
+
+# sound_player:
+#   mode_tilt_started:
+#     dragon_tilt:
+#       bus: effects
+#       action: play
+
+# #---------------------------------------------------------------------------------------------
+
+# variable_player:
+#   mode_tilt_started:
+#     bonus_hit:
+#       int: 0
+#       action: set
+
+# #---------------------------------------------------------------------------------------------
+
+# counters:
+#   bonus_counter:
+#     count_events: none
+#     reset_events: mode_tilt_started

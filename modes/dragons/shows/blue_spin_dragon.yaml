@@ -1,0 +1,266 @@
+#show_version=6
+- time: 0
+  lights:
+    l_pf_02: '166C1C'
+    l_pf_04: '166C1C'
+    l_pf_06: '6B017E'
+    l_pf_08: '6B017E'
+    l_pf_10: '6B017E'
+    l_pf_16: '260E7D'
+    l_pf_18: '260E7D'
+    l_pf_20: '260E7D'
+    l_pf_22: '016B7E'
+    l_pf_24: '016B7E'
+    l_pf_26: '016B7E'
+    l_pf_28: '166C1C'
+    l_pf_30: '166C1C'
+    l_pf_32: '166C1C'
+    l_pf_34: '166C1C'
+    l_pf_36: '166C1C'
+    l_pf_38: '166C1C'
+    l_pf_40: '6B017E'
+    l_pf_44: '6B017E'
+    l_pf_46: '6B017E'
+    l_pf_48: '6B017E'
+    l_pf_50: '6B017E'
+    l_pf_52: '67037E'
+    l_pf_54: '6B017E'
+    l_pf_56: '260E7D'
+    l_pf_58: '260E7D'
+    l_pf_60: '260E7D'
+    l_pf_62: '016B7E'
+    l_pf_64: '016B7E'
+    l_pf_66: '016B7E'
+    l_pf_68: '166C1C'
+    
+- time: '+1'
+  lights:
+    l_pf_10: '260E7D'
+    l_pf_20: '016B7E'
+    l_pf_26: '166C1C'
+    l_pf_52: '260E7D'
+    l_pf_54: '260E7D'
+    
+- time: '+1'
+  lights:
+    l_pf_04: '6B017E'
+    l_pf_38: '6B017E'
+    l_pf_50: '260E7D'
+    l_pf_60: '016B7E'
+    
+- time: '+1'
+  lights:
+    l_pf_18: '1E207E'
+    l_pf_24: '096B58'
+    l_pf_36: '443251'
+    l_pf_66: '166C1C'
+    
+- time: '+1'
+  lights:
+    l_pf_08: '260E7D'
+    l_pf_18: '016B7E'
+    l_pf_24: '166C1C'
+    l_pf_36: '6B017E'
+    l_pf_48: '260E7D'
+    
+- time: '+1'
+  lights:
+    l_pf_02: '4E265C'
+    l_pf_30: '6B017E'
+    l_pf_34: '6B017E'
+    l_pf_46: '260E7D'
+    l_pf_58: '016B7E'
+    l_pf_64: '106936'
+    
+- time: '+1'
+  lights:
+    l_pf_02: '6B017E'
+    l_pf_16: '016B7E'
+    l_pf_22: '166C1C'
+    l_pf_28: '6B017E'
+    l_pf_64: '166C1C'
+    
+- time: '+1'
+  lights:
+    l_pf_06: '260E7D'
+    l_pf_32: '6B017E'
+    l_pf_44: '260E7D'
+    l_pf_56: '016B7E'
+    
+- time: '+1'
+  lights:
+    l_pf_40: '260E7D'
+    l_pf_52: '016B7E'
+    l_pf_62: '166C1C'
+    l_pf_68: '6B017E'
+    
+- time: '+1'
+  lights:
+    l_pf_10: '016B7E'
+    l_pf_20: '166C1C'
+    l_pf_26: '6B017E'
+    l_pf_38: '6A027E'
+    l_pf_54: '016B7E'
+    
+- time: '+1'
+  lights:
+    l_pf_04: '260E7D'
+    l_pf_38: '260E7D'
+    l_pf_50: '016B7E'
+    l_pf_60: '166C1C'
+    
+- time: '+1'
+  lights:
+    l_pf_18: '166C1C'
+    l_pf_24: '6B017E'
+    l_pf_36: '260E7D'
+    l_pf_48: '016B7E'
+    l_pf_66: '6B017E'
+    
+- time: '+1'
+  lights:
+    l_pf_08: '016B7E'
+    l_pf_30: '460C7C'
+    
+- time: '+1'
+  lights:
+    l_pf_02: '260E7D'
+    l_pf_30: '260E7D'
+    l_pf_34: '260E7D'
+    l_pf_46: '016B7E'
+    l_pf_58: '166C1C'
+    l_pf_64: '6B017E'
+    
+- time: '+1'
+  lights:
+    l_pf_16: '166C1C'
+    l_pf_22: '6B017E'
+    l_pf_28: '260E7D'
+    l_pf_32: '2D0E7D'
+    l_pf_44: '016B7E'
+    
+- time: '+1'
+  lights:
+    l_pf_06: '016B7E'
+    l_pf_32: '260E7D'
+    l_pf_56: '166C1C'
+    
+- time: '+1'
+  lights:
+    l_pf_20: '235B2B'
+    l_pf_26: '360F7C'
+    l_pf_40: '016B7E'
+    l_pf_52: '166C1C'
+    l_pf_62: '6B017E'
+    l_pf_68: '260E7D'
+    
+- time: '+1'
+  lights:
+    l_pf_10: '166C1C'
+    l_pf_20: '6B017E'
+    l_pf_26: '260E7D'
+    l_pf_38: '016B7E'
+    l_pf_54: '166C1C'
+    
+- time: '+1'
+  lights:
+    l_pf_04: '016B7E'
+    l_pf_50: '166C1C'
+    l_pf_60: '6B017E'
+    l_pf_66: '260E7D'
+    
+- time: '+1'
+  lights:
+    l_pf_08: '066C6C'
+    l_pf_18: '6B017E'
+    l_pf_24: '260E7D'
+    l_pf_36: '016B7E'
+    l_pf_48: '166C1C'
+    
+- time: '+1'
+  lights:
+    l_pf_08: '166C1C'
+    l_pf_30: '016B7E'
+    l_pf_34: '201B7E'
+    l_pf_46: '036B78'
+    l_pf_58: '394045'
+    
+- time: '+1'
+  lights:
+    l_pf_02: '016B7E'
+    l_pf_16: '5F1170'
+    l_pf_34: '016B7E'
+    l_pf_46: '166C1C'
+    l_pf_58: '6B017E'
+    l_pf_64: '260E7D'
+    
+- time: '+1'
+  lights:
+    l_pf_16: '6B017E'
+    l_pf_22: '260E7D'
+    l_pf_28: '016B7E'
+    l_pf_32: '016B7E'
+    l_pf_44: '166C1C'
+    
+- time: '+1'
+  lights:
+    l_pf_06: '166C1C'
+    l_pf_40: '026B7B'
+    l_pf_56: '6B017E'
+    l_pf_62: '360D7C'
+    
+- time: '+1'
+  lights:
+    l_pf_10: '2F4D39'
+    l_pf_20: '260E7D'
+    l_pf_26: '016B7E'
+    l_pf_40: '166C1C'
+    l_pf_52: '6B017E'
+    l_pf_54: '6B017E'
+    l_pf_62: '260E7D'
+    l_pf_68: '016B7E'
+    
+- time: '+1'
+  lights:
+    l_pf_04: '116B33'
+    l_pf_10: '6B017E'
+    l_pf_38: '166C1C'
+    l_pf_50: '6B017E'
+    
+- time: '+1'
+  lights:
+    l_pf_04: '166C1C'
+    l_pf_60: '260E7D'
+    l_pf_66: '016B7E'
+    
+- time: '+1'
+  lights:
+    l_pf_08: '6B017E'
+    l_pf_18: '260E7D'
+    l_pf_24: '016B7E'
+    l_pf_36: '166C1C'
+    l_pf_48: '6B017E'
+    
+- time: '+1'
+  lights:
+    l_pf_30: '166C1C'
+    l_pf_34: '166C1C'
+    l_pf_46: '6B017E'
+    l_pf_58: '260E7D'
+    
+- time: '+1'
+  lights:
+    l_pf_02: '166C1C'
+    l_pf_16: '260E7D'
+    l_pf_22: '0C507E'
+    l_pf_64: '016B7E'
+    
+- time: '+1'
+  lights:
+    l_pf_06: '5D136E'
+    l_pf_22: '016B7E'
+    l_pf_28: '166C1C'
+    l_pf_32: '166C1C'
+    l_pf_44: '6B017E'
+    l_pf_56: '51087D'
+    

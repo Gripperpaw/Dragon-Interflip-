@@ -1,0 +1,24 @@
+#config_version=6
+
+#bonus - end of ball
+
+mode:
+  priority: 8008                                   #BOOB
+
+#---------------------------------------------------------------------------------------------
+
+mode_settings:
+  display_delay_ms: 800                         #how long the bonus pause is before next ball
+  hurry_up_delay_ms: 100ms                      #after hurry-up event, switch to 0.3s delays
+  hurry_up_event: flipper_cancel
+  bonus_entries:
+  - entry: bonus_eob                            #switch tags
+    score: 0
+
+#---------------------------------------------------------------------------------------------
+
+variable_player:
+  mode_bonus_started:
+    bonus_lights_total: 10000 * current_player.bonus_hit
+    bonus_total_total: >
+      current_player.bonus_hit_total

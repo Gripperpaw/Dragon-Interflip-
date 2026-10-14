@@ -1,0 +1,136 @@
+#show_version=6
+- time: 0
+  lights:
+    l_gi_45: '76FF07'
+    
+- time: '+1'
+  lights:
+    l_gi_51: '71F706'
+    
+- time: '+1'
+  lights:
+    l_gi_45: '000000'
+    l_gi_51: '76FF07'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_gi_53: '865400'
+    
+- time: '+1'
+  lights:
+    l_gi_47: '9D6400'
+    l_gi_53: 'FBA000'
+    
+- time: '+1'
+  lights:
+    l_gi_43: '163201'
+    l_gi_47: '000000'
+    
+- time: '+1'
+  lights:
+    l_gi_43: '76FF07'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_gi_45: '0F0600'
+    l_gi_51: '000000'
+    
+- time: '+1'
+  lights:
+    l_gi_45: 'FBA000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_gi_53: '030200'
+    
+- time: '+1'
+  lights:
+    l_gi_47: '5DD405'
+    l_gi_53: '000000'
+    
+- time: '+1'
+  lights:
+    l_gi_43: '2F6503'
+    l_gi_47: '76FF07'
+    
+- time: '+1'
+  lights:
+    l_gi_43: '000000'
+    
+- time: '+1'
+  lights:
+    l_gi_51: '0B0500'
+    
+- time: '+1'
+  lights:
+    l_gi_45: '301E00'
+    l_gi_51: 'FBA000'
+    
+- time: '+1'
+  lights:
+    l_gi_45: '000000'
+    
+- time: '+1'
+  lights:
+    l_gi_53: '030700'
+    
+- time: '+1'
+  lights:
+    l_gi_53: '75FE07'
+    
+- time: '+1'
+  lights:
+    l_gi_47: '000000'
+    l_gi_53: '76FF07'
+    
+- time: '+1'
+  lights:
+    l_gi_43: 'B47100'
+    
+- time: '+1'
+  lights:
+    l_gi_43: 'FBA000'
+    
+- time: '+1'
+  lights:
+    l_gi_51: '2A1A00'
+    
+- time: '+1'
+  lights:
+    l_gi_45: '70F406'
+    l_gi_51: '000000'
+    
+- time: '+1'
+  lights:
+    l_gi_45: '76FF08'
+    l_gi_53: '76FF08'
+    
+- time: '+1'
+  lights:
+    l_gi_53: '50AC05'
+    
+- time: '+1'
+  lights:
+    l_gi_47: '040200'
+    l_gi_53: '000000'
+    
+- time: '+1'
+  lights:
+    l_gi_47: 'FBA000'
+    
+- time: '+1'
+  lights:
+    l_gi_43: '000000'
+    

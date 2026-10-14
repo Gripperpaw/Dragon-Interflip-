@@ -1,0 +1,18 @@
+#config_version=6
+
+#high_score
+
+high_score:
+  _overwrite: true
+  enter_initials_timeout: 60
+  award_slide_display_time: 6s
+  # define your high score categories and the awards
+  categories:
+    score:
+      - HIGHSCORE1    #only shows 1 score, using for high score to date like an ss
+
+#-----------------------------------------------------------------------------------------------
+
+  defaults:
+    score:
+      - MBP: 3000

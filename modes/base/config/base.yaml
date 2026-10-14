@@ -1,0 +1,168 @@
+#config_version=6
+
+#base mode
+
+mode:
+  start_events: ball_will_start
+  stop_events: ball_will_stop
+  priority: 100
+
+#-----------------------------------------------------------------------------------------------
+slide_player:
+  mode_base_started:
+    base:
+        action: play
+    attract:
+        action: remove
+
+event_player:
+  single_player_ball_started:
+    - show_play1_widget:3s   # waits 3 seconds, then posts show_play1_widget
+
+#---------------------------------------------------------------------------------------------
+
+widget_player:
+  show_play1_widget:
+    play1:
+      slide: base
+      expire: 4s 
+  player_1_ball_started:
+    play1:
+      slide: base
+      expire: 4s 
+  player_2_ball_started:
+    play2:
+      slide: base
+      expire: 4s 
+  player_3_ball_started:
+    play3:
+      slide: base
+      expire: 4s 
+  player_4_ball_started:
+    play4:
+      slide: base
+      expire: 4s 
+
+#---------------------------------------------------------------------------------------------
+
+show_player:
+  mode_base_started:
+    gi_slow_fade:
+       loops: -1
+       speed: 25
+    # all_lights_test:
+    #   loops: -1
+
+#-----------------------------------------------------------------------------------------------
+
+ball_saves:
+  ball_save:
+    active_time: 8s
+    hurry_up_time: 3s
+    timer_start_events: balldevice_bd_drain_ball_eject_success
+    balls_to_save: 1
+
+#-----------------------------------------------------------------------------------------------
+
+variable_player:
+
+  s_pop_1_active:
+    score: 1000                                 #10000 when lit buy s_number01     #the current_player variable if for the multiplier targets for the pf
+  s_pop_3_active:
+    score: 1000                                 #10000 when lit buy s_number03
+  s_pop_5_active:
+    score: 1000                                 #10000 when lit buy s_number05
+
+  s_saucer_active:
+    score: 5000
+
+  s_target_left_low_active:
+    score: 5000
+  s_target_left_mid_active:
+    score: 5000
+  s_target_right_low_active:
+    score: 5000
+  s_target_right_mid_active:
+    score: 5000
+
+  s_number01_active:
+    score: 5000
+  s_number02_active:
+    score: 5000
+  s_number03_active:
+    score: 5000
+  s_number04_active:
+    score: 5000
+  s_number05_active:
+    score: 5000
+
+  s_side_button01_active:
+    score: 100                                 #1000 when lit buy dragon (upper right)
+  s_side_button02_active:
+    score: 100                                 #1000 when lit buy dragon (lower right)
+  s_side_button03_active:
+    score: 100                                 #1000 when lit buy dragon (center)
+  s_side_button04_active:
+    score: 100                                 #1000 when lit buy dragon (upper left)
+  s_side_button05_active:
+    score: 100                                 #1000 when lit buy dragon (lower left)
+
+  s_dragon1_down_active:
+    score: 5000
+  s_dragon2_down_active:
+    score: 5000
+  s_dragon3_down_active:
+    score: 5000
+  s_dragon4_down_active:
+    score: 5000
+  s_dragon5_down_active:
+    score: 5000
+
+sound_player:
+  mode_base_started:
+    game_music:
+      bus: music
+      volume: 0.50
+      action: play
+      loops: -1
+      
+  s_target_left_low_active:
+    blip_5:
+  s_target_left_mid_active:
+    blip_5:
+  s_target_right_low_active:
+    blip_5:
+  s_target_right_mid_active:
+    blip_5:
+  s_drain_active:
+    failure:
+  s_plunger_active:
+    new_ball:
+
+timers:                      #into base mode
+  dragon_reset_timer:
+    start_value: 0
+    end_value: 5
+    direction: up
+    restart_on_complete: false
+    tick_interval: 800ms
+    start_running: true
+
+
+light_player:
+  single_player_ball_started:
+    l_player_01: on
+  player_1_ball_started:
+    l_player_01: on
+  player_2_ball_started:
+    l_player_02: on
+  player_3_ball_started:
+    l_player_03: on
+  player_4_ball_started:
+    l_player_04: on
+
+  ball_will_stop:
+    l_player_01: off
+    l_player_02: off
+    l_player_03: off
+    l_player_04: off

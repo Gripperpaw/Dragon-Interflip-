@@ -1,0 +1,70 @@
+#config_version=6
+
+#countdown_bonus
+
+mode:
+  priority: 500
+  start_events: ball_will_end{current_player.bonus_hit > 0}
+  stop_events: timer_countdown_bonus_complete
+  use_wait_queue: true
+
+#---------------------------------------------------------------------------------------------
+
+queue_relay_player:
+  ball_ending:
+    post: start_bonus_count
+    wait_for: timer_countdown_bonus_complete
+
+#---------------------------------------------------------------------------------------------
+
+timers:
+  countdown_bonus:
+    start_value: current_player.bonus_hit
+    end_value: 0
+    direction: down
+    start_running: false
+    tick_interval: 800ms
+    control_events:
+      - action: start
+        event: start_bonus_count
+
+#---------------------------------------------------------------------------------------------
+
+variable_player:
+  timer_countdown_bonus_tick:                     #add 10k per tick
+    score:
+      int: 10000
+      action: add
+
+#---------------------------------------------------------------------------------------------
+
+light_player:                                     #turn off one light per tick matching countdown
+  timer_countdown_bonus_tick{ticks==10}:
+    l_pf_52: off
+  timer_countdown_bonus_tick{ticks==9}:
+    l_pf_50: off
+  timer_countdown_bonus_tick{ticks==8}:
+    l_pf_48: off
+    l_pf_42: off
+  timer_countdown_bonus_tick{ticks==7}:
+    l_pf_46: off
+  timer_countdown_bonus_tick{ticks==6}:
+    l_pf_44: off
+  timer_countdown_bonus_tick{ticks==5}:
+    l_pf_40: off
+  timer_countdown_bonus_tick{ticks==4}:
+    l_pf_38: off
+  timer_countdown_bonus_tick{ticks==3}:
+    l_pf_36: off
+  timer_countdown_bonus_tick{ticks==2}:
+    l_pf_34: off
+  timer_countdown_bonus_tick{ticks==1}:
+    l_pf_32: off
+
+#---------------------------------------------------------------------------------------------
+
+sound_player:                                    #play sound for each tick
+  timer_countdown_bonus_tick:
+    playfield_bonus:
+      bus: effects
+      action: play

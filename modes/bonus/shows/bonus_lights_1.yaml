@@ -1,0 +1,9 @@
+#show_version=6
+
+- time: 0
+  lights:
+    l_pf_32: off
+  sounds:
+    playfield_bonus:
+      action: play
+      bus: effects
